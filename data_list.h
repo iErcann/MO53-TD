@@ -40,6 +40,35 @@ public:
     double get_value(size_t position) const;
 
     void sort_list(bool ascending);
+
+    struct iterator_values_list
+    {
+
+    private:
+        list_element *element;
+
+    public:
+        iterator_values_list(list_element *element);
+        list_element &operator*() const { return *element; };
+
+        list_element *getElement() { return this->element; };
+        iterator_values_list &operator++();
+        iterator_values_list &operator++(int);
+        friend bool operator!=(const iterator_values_list &itr1, const iterator_values_list &itr2) { return (itr1.element != itr2.element); };
+    };
+    iterator_values_list begin();
+    iterator_values_list end();
+    list_element &operator[](int i)
+    {
+        iterator_values_list it = begin();
+        int count = 0;
+        while (count < i && it != end())
+        {
+            it++;
+            count++;
+        }
+        return *it;
+    }
 };
 
 class data_list

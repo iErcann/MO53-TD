@@ -257,3 +257,34 @@ data_list data_list::table_count()
     result._values.push_back(static_cast<double>(_values.size()));
     return result;
 }
+
+values_list::iterator_values_list values_list::begin()
+{
+    return iterator_values_list(this->_head);
+}
+
+values_list::iterator_values_list values_list::end()
+{
+    return iterator_values_list(this->_tail->get_next());
+}
+
+values_list::iterator_values_list::iterator_values_list(list_element *element)
+{
+    this->element = element;
+}
+
+values_list::iterator_values_list &values_list::iterator_values_list::operator++()
+{
+    if (this->element != nullptr)
+    {
+        this->element = this->element->get_next();
+    }
+    return *this;
+}
+
+values_list::iterator_values_list &values_list::iterator_values_list::operator++(int value)
+{
+    iterator_values_list it = *this;
+    ++(*this);
+    return it;
+}
