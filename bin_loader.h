@@ -14,7 +14,7 @@ public:
     bin_loader(const string &s) : loader(s){};
     virtual ~bin_loader() {}
 
-    virtual storage_type &load(storage_type &storage);
+    storage_type &load(storage_type &storage);
 };
 
 #endif // BIN_LOADER_H

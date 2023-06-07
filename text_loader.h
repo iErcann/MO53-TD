@@ -13,7 +13,7 @@ public:
     text_loader(const string &s) : loader(s){};
     virtual ~text_loader() {}
 
-    virtual storage_type &load(storage_type &storage);
+    storage_type &load(storage_type &storage);
 };
 
 #endif // TEXT_LOADER_H

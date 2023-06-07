@@ -1,5 +1,6 @@
 #include "list_storage.h"
 #include <stdexcept>
+#include <iostream>
 
 list_storage::list_storage(const list_storage &other)
 {
@@ -38,6 +39,7 @@ void list_storage::push_back(double v)
 {
     if (!_head)
     {
+        std::cout << "head" << std::endl;
         _head = make_shared<list_element>(v);
         _tail = _head;
     }
