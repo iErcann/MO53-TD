@@ -98,3 +98,44 @@ public:
 
     /**
      * @brief Destructeur virtuel de list_storage
+     */
+    virtual ~list_storage() override{};
+
+    /**
+     * @brief Ajoute un élément à la fin de la liste
+     * @param d Valeur de l'élément à ajouter
+     */
+    void push_back(const double d);
+
+    /**
+     * @brief Obtient l'élément à la position spécifiée dans la liste
+     * @param position Position de l'élément à obtenir
+     * @return Valeur de l'élément à la position spécifiée
+     */
+    double get_element(const int position) const;
+
+    /**
+     * @brief Supprime et retourne l'élément en tête de liste
+     * @return Valeur de l'élément supprimé
+     */
+    double pop_element();
+
+    /**
+     * @brief Vide la liste
+     */
+    void clear();
+
+    /**
+     * @brief Obtient le nombre d'éléments dans la liste
+     * @return Nombre d'éléments dans la liste
+     */
+    int size() const;
+
+    /**
+     * @brief Trie les éléments du stockage
+     * @param ascending Booléen indiquant si le tri est croissant ou non
+     */
+    void sort_storage(const bool ascending);
+};
+
+#endif // LIST_STORAGE_H
