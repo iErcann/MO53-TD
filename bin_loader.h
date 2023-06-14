@@ -19,7 +19,7 @@ public:
      *
      * Initialise le nom du fichier à "loader.bin".
      */
-    bin_loader() : loader("loader.bin"){}
+    bin_loader() : loader("loader.bin") {}
 
     /**
      * @brief Constructeur avec un nom de fichier spécifié.
