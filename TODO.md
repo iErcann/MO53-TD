@@ -5,10 +5,11 @@ Cette liste pourra vous guider dans le choix des étapes de refactoring en prés
 ## Rendre la liste chaînée compatible avec les appels du vector
 
 Cette tâche doit permettre d'utiliser la liste comme le vecteur. Pour le permettre, il est nécessaire :
- - de renommer `add_value` en `push_back`
- - de renommer `clear_list` en `clear`
- - d'ajouter un iterateur à la classe, ainsi que les méthodes `begin` et `end` permettant de parcourir la liste, ainsi que l'opérateur `++` pour ces itérateurs.
- - d'ajouter l'opérateur `[]` pour accéder à une valeur par sa position.
+
+- de renommer `add_value` en `push_back`
+- de renommer `clear_list` en `clear`
+- d'ajouter un iterateur à la classe, ainsi que les méthodes `begin` et `end` permettant de parcourir la liste, ainsi que l'opérateur `++` pour ces itérateurs.
+- d'ajouter l'opérateur `[]` pour accéder à une valeur par sa position.
 
 ## Utilisation d'un manager pour les ressources
 
@@ -50,7 +51,7 @@ class process { // raw pointers may be improved
 	loader *_loader;
 	calculation *_calc;
 	writer *_writer;
-	
+
 public:
 	process(storage_type *stor, loader *load, calculation *calc, writer *write);
 	void execute();

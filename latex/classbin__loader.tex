@@ -1,0 +1,129 @@
+\doxysection{bin\+\_\+loader Class Reference}
+\hypertarget{classbin__loader}{}\label{classbin__loader}\index{bin\_loader@{bin\_loader}}
+
+
+Classe pour charger des données à partir d\textquotesingle{}un fichier binaire.  
+
+
+
+
+{\ttfamily \#include $<$bin\+\_\+loader.\+h$>$}
+
+Inheritance diagram for bin\+\_\+loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbin__loader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbin__loader_a6324c1afdf506b8b2c21a81f5a779f08}{bin\+\_\+loader}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbin__loader_a85847a0aee5370f6ca6da60a0fea4d7a}{bin\+\_\+loader}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Constructeur avec un nom de fichier spécifié. \end{DoxyCompactList}\item 
+\Hypertarget{classbin__loader_ac4f1ff1fd72a90e1c74cbfdd6b8af35f}\label{classbin__loader_ac4f1ff1fd72a90e1c74cbfdd6b8af35f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}bin\+\_\+loader} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classbin__loader_a138d147cebfb5c36b5c07b9fe9ee0403}{load}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)
+\begin{DoxyCompactList}\small\item\em Fonction de chargement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classloader}{loader}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloader_af45d915d44f769fad43151df6236d4fc}{loader}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classloader_aecf0e8c4fb0a4a608b94586e2b29005a}{loader}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant en paramètre la source de données. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}loader} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{load}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)=0
+\begin{DoxyCompactList}\small\item\em Méthode abstraite pour charger les données dans un objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classloader}{loader}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour charger des données à partir d\textquotesingle{}un fichier binaire. 
+
+Cette classe hérite de la classe {\ttfamily loader} et implémente la fonction de chargement spécifique aux fichiers binaires. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbin__loader_a6324c1afdf506b8b2c21a81f5a779f08}\label{classbin__loader_a6324c1afdf506b8b2c21a81f5a779f08} 
+\index{bin\_loader@{bin\_loader}!bin\_loader@{bin\_loader}}
+\index{bin\_loader@{bin\_loader}!bin\_loader@{bin\_loader}}
+\doxysubsubsection{\texorpdfstring{bin\_loader()}{bin\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bin\+\_\+loader\+::bin\+\_\+loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur par défaut. 
+
+Initialise le nom du fichier à \"{}loader.\+bin\"{}. \Hypertarget{classbin__loader_a85847a0aee5370f6ca6da60a0fea4d7a}\label{classbin__loader_a85847a0aee5370f6ca6da60a0fea4d7a} 
+\index{bin\_loader@{bin\_loader}!bin\_loader@{bin\_loader}}
+\index{bin\_loader@{bin\_loader}!bin\_loader@{bin\_loader}}
+\doxysubsubsection{\texorpdfstring{bin\_loader()}{bin\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bin\+\_\+loader\+::bin\+\_\+loader (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur avec un nom de fichier spécifié. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Nom du fichier à charger. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbin__loader_a138d147cebfb5c36b5c07b9fe9ee0403}\label{classbin__loader_a138d147cebfb5c36b5c07b9fe9ee0403} 
+\index{bin\_loader@{bin\_loader}!load@{load}}
+\index{load@{load}!bin\_loader@{bin\_loader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& bin\+\_\+loader\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction de chargement. 
+
+Load data from a binary file into a storage.
+
+Charge les données à partir d\textquotesingle{}un fichier binaire et les stocke dans l\textquotesingle{}objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} passé en paramètre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & Objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} dans lequel stocker les données chargées. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Une référence vers l\textquotesingle{}objet {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} après le chargement.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & The storage to load the data into.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded storage.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for reading. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{loader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bin\+\_\+loader.\+h\item 
+\mbox{\hyperlink{bin__loader_8cpp}{bin\+\_\+loader.\+cpp}}\end{DoxyCompactItemize}

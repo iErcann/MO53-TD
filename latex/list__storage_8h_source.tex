@@ -1,0 +1,66 @@
+\doxysection{list\+\_\+storage.\+h}
+\hypertarget{list__storage_8h_source}{}\label{list__storage_8h_source}\mbox{\hyperlink{list__storage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LIST\_STORAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LIST\_STORAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}storage\_type.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlist__element}{list\_element}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \_value;\ }
+\DoxyCodeLine{00017\ \ \ \ \ shared\_ptr<list\_element>\ \_prev;\ }
+\DoxyCodeLine{00018\ \ \ \ \ shared\_ptr<list\_element>\ \_next;\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classlist__element_abc0880a90b85ab23a02f8ffcdd6009b0}{list\_element}}(\textcolor{keywordtype}{double}\ v\ =\ 0.0,\ shared\_ptr<list\_element>\ p\ =\ \textcolor{keyword}{nullptr},\ shared\_ptr<list\_element>\ n\ =\ \textcolor{keyword}{nullptr})\ :\ \_value(v),\ \_prev(p),\ \_next(n)\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classlist__element_a3cf691d87a11e0e82a92bc7018fffe10}{\string~list\_element}}()\ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ shared\_ptr<list\_element>\ \mbox{\hyperlink{classlist__element_a68c6b7df81d5b9ef969e40954ea03799}{get\_next}}()\ \{\ \textcolor{keywordflow}{return}\ \_next;\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__element_a702c13b71132d40028457719578d4791}{set\_next}}(shared\_ptr<list\_element>\ n)\ \{\ \_next\ =\ n;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ shared\_ptr<list\_element>\ \mbox{\hyperlink{classlist__element_a1335039e67c21b421f901375cf12a116}{get\_prev}}()\ \{\ \textcolor{keywordflow}{return}\ \_prev;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__element_aa4dd6ec05cabf0af66ead67eaadf777e}{set\_prev}}(shared\_ptr<list\_element>\ n)\ \{\ \_prev\ =\ n;\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classlist__element_ace3c6890cdbbae0054ccf896a4104e34}{get\_value}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_value;\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__element_af5da8a5c17781d07ff9411c4878d7b76}{set\_value}}(\textcolor{keywordtype}{double}\ v)\ \{\ \_value\ =\ v;\ \}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlist__storage}{list\_storage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classstorage__type}{storage\_type}}}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ shared\_ptr<list\_element>\ \_head;\ }
+\DoxyCodeLine{00078\ \ \ \ \ shared\_ptr<list\_element>\ \_tail;\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classlist__storage_a8267a423f8f5aa1d9f1e4d93a8069431}{list\_storage}}()\{\};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{classlist__storage_a8267a423f8f5aa1d9f1e4d93a8069431}{list\_storage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlist__storage}{list\_storage}}\ \&storage);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classlist__storage}{list\_storage}}\ \&\mbox{\hyperlink{classlist__storage_ac3dfb321939e004c03126d7e2cc56eb5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlist__storage}{list\_storage}}\ \&storage);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classlist__storage_a5df58dee5d1348345557f59e1006bdc4}{\string~list\_storage}}()\textcolor{keyword}{\ override}\{\};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__storage_ac512aa3b726bcf94fbb69a2b5e59dd36}{push\_back}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ d);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classlist__storage_afdb5713d8fb073e3be711b6f26d9c153}{get\_element}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classlist__storage_a6959470ace2513a09ca2255b0f1b12fd}{pop\_element}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__storage_aa5d77ecc2dd34386516e044272e50f55}{clear}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlist__storage_a996edaf72fd288c0c9061d874b74f9cd}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlist__storage_a5ff68dc3c0fa89dd3745f40b52d2d898}{sort\_storage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ascending);}
+\DoxyCodeLine{00139\ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LIST\_STORAGE\_H}}
+
+\end{DoxyCode}
