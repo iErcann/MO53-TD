@@ -7,9 +7,17 @@
 
 using namespace std;
 
+/**
+ * @brief Default constructor for the data_table class.
+ */
 data_table::data_table() {
 }
 
+/**
+ * @brief Reads data from a text file and populates the table.
+ *
+ * @param source The path of the text file.
+ */
 void data_table::from_text(const std::string &source) {
     _table.clear();
     ifstream f{source};
@@ -23,6 +31,11 @@ void data_table::from_text(const std::string &source) {
     }
 }
 
+/**
+ * @brief Reads data from a binary file and populates the table.
+ *
+ * @param source The path of the binary file.
+ */
 void data_table::from_binary(const std::string &source) {
     _table.clear();
     ifstream f{source, std::ios::binary};
@@ -36,6 +49,11 @@ void data_table::from_binary(const std::string &source) {
     }
 }
 
+/**
+ * @brief Writes the table data to a text file.
+ *
+ * @param destination The path of the text file to write to.
+ */
 void data_table::to_text(const std::string &destination) {
     ofstream f{destination};
     if (f.is_open()) {
@@ -45,6 +63,11 @@ void data_table::to_text(const std::string &destination) {
     }
 }
 
+/**
+ * @brief Writes the table data to a binary file.
+ *
+ * @param destination The path of the binary file to write to.
+ */
 void data_table::to_binary(const std::string &destination) {
     ofstream f{destination, std::ios::binary};
     if (f.is_open()) {
@@ -56,12 +79,21 @@ void data_table::to_binary(const std::string &destination) {
     }
 }
 
+/**
+ * @brief Prints the data in the table to the console.
+ */
 void data_table::print_data() const {
     for (const double &value: _table) {
         cout << value << endl;
     }
 }
 
+/**
+ * @brief Computes the moving average of the table.
+ *
+ * @param window_width The width of the moving average window.
+ * @return The data_table object containing the moving average.
+ */
 data_table data_table::moving_average(size_t window_width) {
     data_table result;
     if (window_width < _table.size()) {
@@ -79,6 +111,12 @@ data_table data_table::moving_average(size_t window_width) {
     return result;
 }
 
+/**
+ * @brief Sorts the table in ascending or descending order.
+ *
+ * @param ascending If true, sorts the table in ascending order. If false, sorts in descending order.
+ * @return The sorted data_table object.
+ */
 data_table data_table::sort_table(bool ascending) {
     data_table result;
     result._table = _table;
@@ -91,6 +129,11 @@ data_table data_table::sort_table(bool ascending) {
     return result;
 }
 
+/**
+ * @brief Computes the average of the table.
+ *
+ * @return The data_table object containing the average value.
+ */
 data_table data_table::average() {
     data_table result;
     data_table sum_table = table_sum();
@@ -98,6 +141,11 @@ data_table data_table::average() {
     return result;
 }
 
+/**
+ * @brief Computes the sum of the values in the table.
+ *
+ * @return The data_table object containing the sum.
+ */
 data_table data_table::table_sum() {
     data_table result;
     double current_sum = 0.0;
@@ -108,9 +156,13 @@ data_table data_table::table_sum() {
     return result;
 }
 
+/**
+ * @brief Computes the count of values in the table.
+ *
+ * @return The data_table object containing the count.
+ */
 data_table data_table::table_count() {
     data_table result;
     result._table.push_back(static_cast<double>(_table.size()));
     return result;
 }
-
