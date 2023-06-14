@@ -1,0 +1,134 @@
+\doxysection{text\+\_\+loader Class Reference}
+\hypertarget{classtext__loader}{}\label{classtext__loader}\index{text\_loader@{text\_loader}}
+
+
+Classe représentant un chargeur de fichiers texte.  
+
+
+
+
+{\ttfamily \#include $<$text\+\_\+loader.\+h$>$}
+
+Inheritance diagram for text\+\_\+loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtext__loader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtext__loader_aca5a708cc49e428a8301c136b2dcd559}{text\+\_\+loader}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtext__loader_aecd4821a0db4309a076a3a7a0f54c106}{text\+\_\+loader}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Constructeur avec nom de fichier personnalisé. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtext__loader_a7a7a1d5da8429d3c4d7cc6eed4018c55}{\texorpdfstring{$\sim$}{\string~}text\+\_\+loader}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classtext__loader_acca23210e51fbc8873b7ea65b49b5782}{load}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)
+\begin{DoxyCompactList}\small\item\em Charge les données du fichier texte dans le stockage spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classloader}{loader}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloader_af45d915d44f769fad43151df6236d4fc}{loader}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classloader_aecf0e8c4fb0a4a608b94586e2b29005a}{loader}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant en paramètre la source de données. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}loader} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{load}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)=0
+\begin{DoxyCompactList}\small\item\em Méthode abstraite pour charger les données dans un objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classloader}{loader}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un chargeur de fichiers texte. 
+
+La classe \doxylink{classtext__loader}{text\+\_\+loader} hérite de la classe loader et permet de charger des données à partir d\textquotesingle{}un fichier texte dans un objet de type \doxylink{classstorage__type}{storage\+\_\+type}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtext__loader_aca5a708cc49e428a8301c136b2dcd559}\label{classtext__loader_aca5a708cc49e428a8301c136b2dcd559} 
+\index{text\_loader@{text\_loader}!text\_loader@{text\_loader}}
+\index{text\_loader@{text\_loader}!text\_loader@{text\_loader}}
+\doxysubsubsection{\texorpdfstring{text\_loader()}{text\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily text\+\_\+loader\+::text\+\_\+loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur par défaut. 
+
+Ce constructeur initialise le nom du fichier à \"{}texte.\+txt\"{}. \Hypertarget{classtext__loader_aecd4821a0db4309a076a3a7a0f54c106}\label{classtext__loader_aecd4821a0db4309a076a3a7a0f54c106} 
+\index{text\_loader@{text\_loader}!text\_loader@{text\_loader}}
+\index{text\_loader@{text\_loader}!text\_loader@{text\_loader}}
+\doxysubsubsection{\texorpdfstring{text\_loader()}{text\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily text\+\_\+loader\+::text\+\_\+loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur avec nom de fichier personnalisé. 
+
+Ce constructeur permet de spécifier le nom du fichier à charger. 
+\begin{DoxyParams}{Parameters}
+{\em s} & Le nom du fichier à charger. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtext__loader_a7a7a1d5da8429d3c4d7cc6eed4018c55}\label{classtext__loader_a7a7a1d5da8429d3c4d7cc6eed4018c55} 
+\index{text\_loader@{text\_loader}!````~text\_loader@{\texorpdfstring{$\sim$}{\string~}text\_loader}}
+\index{````~text\_loader@{\texorpdfstring{$\sim$}{\string~}text\_loader}!text\_loader@{text\_loader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}text\_loader()}{\string~text\_loader()}}
+{\footnotesize\ttfamily virtual text\+\_\+loader\+::\texorpdfstring{$\sim$}{\string~}text\+\_\+loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructeur virtuel. 
+
+Destructeur virtuel pour assurer la libération appropriée des ressources. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtext__loader_acca23210e51fbc8873b7ea65b49b5782}\label{classtext__loader_acca23210e51fbc8873b7ea65b49b5782} 
+\index{text\_loader@{text\_loader}!load@{load}}
+\index{load@{load}!text\_loader@{text\_loader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& text\+\_\+loader\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Charge les données du fichier texte dans le stockage spécifié. 
+
+Charge les données à partir d\textquotesingle{}un fichier texte dans une structure de stockage.
+
+Cette fonction charge les données du fichier texte dans un objet de type \doxylink{classstorage__type}{storage\+\_\+type}. 
+\begin{DoxyParams}{Parameters}
+{\em storage} & L\textquotesingle{}objet de type \doxylink{classstorage__type}{storage\+\_\+type} dans lequel charger les données. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Une référence vers l\textquotesingle{}objet de type \doxylink{classstorage__type}{storage\+\_\+type} après le chargement des données.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & La structure de stockage à remplir avec les données du fichier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La structure de stockage remplie. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ios\+\_\+base\+::failure} & Si le fichier ne peut pas être ouvert. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{loader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{text__loader_8h}{text\+\_\+loader.\+h}}\item 
+text\+\_\+loader.\+cpp\end{DoxyCompactItemize}

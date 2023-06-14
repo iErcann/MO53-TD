@@ -1,0 +1,108 @@
+\doxysection{Manager Class Reference}
+\hypertarget{class_manager}{}\label{class_manager}\index{Manager@{Manager}}
+
+
+Class that manages data operations.  
+
+
+
+
+{\ttfamily \#include $<$manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_manager_a1658ff9f18e38ccd9cb8b0b371b9c20b}{Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_manager}{Manager} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \& \mbox{\hyperlink{class_manager_aa8904f271886a02b0170d807b0a00f69}{get\+Data\+List}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the data list object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ae7a06e8630f694ca6dd8da4e0b0ef621}{create\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Creates objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a99cbd73141f5768ee16410641476c956}{run\+Calculations}} ()
+\begin{DoxyCompactList}\small\item\em Runs calculations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_add1055f681ff5db6f8a1aba2d6a01778}{save\+Results}} ()
+\begin{DoxyCompactList}\small\item\em Saves results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manages data operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_manager_a1658ff9f18e38ccd9cb8b0b371b9c20b}\label{class_manager_a1658ff9f18e38ccd9cb8b0b371b9c20b} 
+\index{Manager@{Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Manager()}{Manager()}}
+{\footnotesize\ttfamily Manager\+::\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_manager}{Manager} class. 
+
+\doxylink{class_manager}{Manager} class constructor. This is the constructor for the \doxylink{class_manager}{Manager} class. It initializes the \doxylink{class_manager}{Manager} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_manager_ae7a06e8630f694ca6dd8da4e0b0ef621}\label{class_manager_ae7a06e8630f694ca6dd8da4e0b0ef621} 
+\index{Manager@{Manager}!createObjects@{createObjects}}
+\index{createObjects@{createObjects}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{createObjects()}{createObjects()}}
+{\footnotesize\ttfamily void Manager\+::create\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates objects. 
+
+Create the necessary objects.
+
+This function creates an instance of the \doxylink{classdata__list}{data\+\_\+list} class and loads data from a binary file.
+
+It uses the from\+\_\+binary function of the \doxylink{classdata__list}{data\+\_\+list} class to read data from the \"{}binary.\+bin\"{} file. \Hypertarget{class_manager_aa8904f271886a02b0170d807b0a00f69}\label{class_manager_aa8904f271886a02b0170d807b0a00f69} 
+\index{Manager@{Manager}!getDataList@{getDataList}}
+\index{getDataList@{getDataList}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getDataList()}{getDataList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} \& Manager\+::get\+Data\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the data list object. 
+
+Get the \doxylink{classdata__list}{data\+\_\+list} object. This function returns a reference to the \doxylink{classdata__list}{data\+\_\+list} object. It allows access to the \doxylink{classdata__list}{data\+\_\+list} object from outside the \doxylink{class_manager}{Manager} class.
+
+\begin{DoxyReturn}{Returns}
+Reference to the data list object.
+
+Reference to the \doxylink{classdata__list}{data\+\_\+list} object. 
+\end{DoxyReturn}
+\Hypertarget{class_manager_a99cbd73141f5768ee16410641476c956}\label{class_manager_a99cbd73141f5768ee16410641476c956} 
+\index{Manager@{Manager}!runCalculations@{runCalculations}}
+\index{runCalculations@{runCalculations}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{runCalculations()}{runCalculations()}}
+{\footnotesize\ttfamily void Manager\+::run\+Calculations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs calculations. 
+
+Perform the required calculations on the objects.
+
+This function performs calculations on the \doxylink{classdata__list}{data\+\_\+list} object.
+
+It prints the original data and calculates the moving average with a window width of 2. \Hypertarget{class_manager_add1055f681ff5db6f8a1aba2d6a01778}\label{class_manager_add1055f681ff5db6f8a1aba2d6a01778} 
+\index{Manager@{Manager}!saveResults@{saveResults}}
+\index{saveResults@{saveResults}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{saveResults()}{saveResults()}}
+{\footnotesize\ttfamily void Manager\+::save\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves results. 
+
+Save the results to output files or other forms of output.
+
+This function saves the results to a text file.
+
+It uses the to\+\_\+text function of the \doxylink{classdata__list}{data\+\_\+list} class to save the data from \+\_\+data\+List to the \"{}output.\+txt\"{} file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{manager_8h}{manager.\+h}}\item 
+\mbox{\hyperlink{manager_8cpp}{manager.\+cpp}}\end{DoxyCompactItemize}

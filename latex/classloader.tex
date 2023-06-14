@@ -1,0 +1,106 @@
+\doxysection{loader Class Reference}
+\hypertarget{classloader}{}\label{classloader}\index{loader@{loader}}
+
+
+Classe abstraite représentant un chargeur de données.  
+
+
+
+
+{\ttfamily \#include $<$loader.\+h$>$}
+
+Inheritance diagram for loader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classloader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloader_af45d915d44f769fad43151df6236d4fc}{loader}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classloader_aecf0e8c4fb0a4a608b94586e2b29005a}{loader}} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant en paramètre la source de données. \end{DoxyCompactList}\item 
+\Hypertarget{classloader_a3c97c3c48fcc1af3b9ec9aac4652a291}\label{classloader_a3c97c3c48fcc1af3b9ec9aac4652a291} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}loader} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{load}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)=0
+\begin{DoxyCompactList}\small\item\em Méthode abstraite pour charger les données dans un objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe abstraite représentant un chargeur de données. 
+
+Cette classe abstraite définit l\textquotesingle{}interface commune pour tous les chargeurs de données. Un chargeur est responsable de charger des données à partir d\textquotesingle{}une source spécifiée dans un objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classloader_af45d915d44f769fad43151df6236d4fc}\label{classloader_af45d915d44f769fad43151df6236d4fc} 
+\index{loader@{loader}!loader@{loader}}
+\index{loader@{loader}!loader@{loader}}
+\doxysubsubsection{\texorpdfstring{loader()}{loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily loader\+::loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur par défaut. 
+
+Initialise la source de données avec la valeur par défaut \"{}texte.\+txt\"{}. \Hypertarget{classloader_aecf0e8c4fb0a4a608b94586e2b29005a}\label{classloader_aecf0e8c4fb0a4a608b94586e2b29005a} 
+\index{loader@{loader}!loader@{loader}}
+\index{loader@{loader}!loader@{loader}}
+\doxysubsubsection{\texorpdfstring{loader()}{loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily loader\+::loader (\begin{DoxyParamCaption}\item[{const string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur prenant en paramètre la source de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Le chemin d\textquotesingle{}accès à la source de données. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}\label{classloader_a7459dd8c55fde00e2fcb3cf316562e2a} 
+\index{loader@{loader}!load@{load}}
+\index{load@{load}!loader@{loader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& loader\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode abstraite pour charger les données dans un objet de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & L\textquotesingle{}objet {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} dans lequel charger les données. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Une référence vers l\textquotesingle{}objet {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} contenant les données chargées. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbin__loader_a138d147cebfb5c36b5c07b9fe9ee0403}{bin\+\_\+loader}}, and \mbox{\hyperlink{classtext__loader_acca23210e51fbc8873b7ea65b49b5782}{text\+\_\+loader}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classloader_aa2515cd162366f8f8b452559ba8b8e77}\label{classloader_aa2515cd162366f8f8b452559ba8b8e77} 
+\index{loader@{loader}!source@{source}}
+\index{source@{source}!loader@{loader}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily string loader\+::source\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le chemin d\textquotesingle{}accès à la source de données. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+loader.\+h\end{DoxyCompactItemize}

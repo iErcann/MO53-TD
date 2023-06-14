@@ -1,0 +1,268 @@
+\doxysection{list\+\_\+storage Class Reference}
+\hypertarget{classlist__storage}{}\label{classlist__storage}\index{list\_storage@{list\_storage}}
+
+
+Classe représentant un stockage de données sous forme de liste.  
+
+
+
+
+{\ttfamily \#include $<$list\+\_\+storage.\+h$>$}
+
+Inheritance diagram for list\+\_\+storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlist__storage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlist__storage_a8267a423f8f5aa1d9f1e4d93a8069431}\label{classlist__storage_a8267a423f8f5aa1d9f1e4d93a8069431} 
+{\bfseries list\+\_\+storage} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{classlist__storage}{list\+\_\+storage}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__storage_a4288a4959f4db0edeb5ac0b8d7ab2257}{list\+\_\+storage}} (const \mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \&storage)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{classlist__storage}{list\+\_\+storage}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \& \mbox{\hyperlink{classlist__storage_ac3dfb321939e004c03126d7e2cc56eb5}{operator=}} (const \mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \&storage)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation de \doxylink{classlist__storage}{list\+\_\+storage}. \end{DoxyCompactList}\item 
+\Hypertarget{classlist__storage_a5df58dee5d1348345557f59e1006bdc4}\label{classlist__storage_a5df58dee5d1348345557f59e1006bdc4} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}list\+\_\+storage} () override
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel de \doxylink{classlist__storage}{list\+\_\+storage}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__storage_ac512aa3b726bcf94fbb69a2b5e59dd36}{push\+\_\+back}} (const double d)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément à la fin de la liste. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlist__storage_afdb5713d8fb073e3be711b6f26d9c153}{get\+\_\+element}} (const int position) const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}élément à la position spécifiée dans la liste. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlist__storage_a6959470ace2513a09ca2255b0f1b12fd}{pop\+\_\+element}} ()
+\begin{DoxyCompactList}\small\item\em Supprime et retourne l\textquotesingle{}élément en tête de liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__storage_aa5d77ecc2dd34386516e044272e50f55}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Vide la liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlist__storage_a996edaf72fd288c0c9061d874b74f9cd}{size}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nombre d\textquotesingle{}éléments dans la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__storage_a5ff68dc3c0fa89dd3745f40b52d2d898}{sort\+\_\+storage}} (const bool ascending)
+\begin{DoxyCompactList}\small\item\em Trie les éléments du stockage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries storage\+\_\+type} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstorage__type_a4c63184cbf585a567236e17ffee1f356}{storage\+\_\+type}} (const \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \& \mbox{\hyperlink{classstorage__type_a0280549a3cb51bea1dfdddf9460bf8fe}{operator=}} (const \mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}storage\+\_\+type} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstorage__type_a7688a255771f3a4a54e059663b3413e4}{push\+\_\+back}} (const double d)=0
+\begin{DoxyCompactList}\small\item\em Ajoute un élément à la fin du stockage. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classstorage__type_a73c8a625f1b584ad5ab99488f1109603}{get\+\_\+element}} (const int position) const =0
+\begin{DoxyCompactList}\small\item\em Récupère l\textquotesingle{}élément à la position donnée. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classstorage__type_acf6fa8b36ec49ce0b13d5db4458248ff}{pop\+\_\+element}} ()=0
+\begin{DoxyCompactList}\small\item\em Supprime et retourne l\textquotesingle{}élément en haut du stockage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstorage__type_aa667aef23ebc2425f07c5b6f33146bd1}{clear}} ()=0
+\begin{DoxyCompactList}\small\item\em Vide le stockage. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classstorage__type_ada27f5f0a31844352c43b28b060f1ec0}{size}} () const =0
+\begin{DoxyCompactList}\small\item\em Retourne la taille du stockage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classstorage__type_a7fd2b4f3635e3fda7a8932f5a9edbaed}{sort\+\_\+storage}} (const bool ascending)=0
+\begin{DoxyCompactList}\small\item\em Trie le stockage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un stockage de données sous forme de liste. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlist__storage_a4288a4959f4db0edeb5ac0b8d7ab2257}\label{classlist__storage_a4288a4959f4db0edeb5ac0b8d7ab2257} 
+\index{list\_storage@{list\_storage}!list\_storage@{list\_storage}}
+\index{list\_storage@{list\_storage}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{list\_storage()}{list\_storage()}}
+{\footnotesize\ttfamily list\+\_\+storage\+::list\+\_\+storage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \&}]{storage }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{classlist__storage}{list\+\_\+storage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & Le \doxylink{classlist__storage}{list\+\_\+storage} à copier \\
+\hline
+\end{DoxyParams}
+Copy constructor for \doxylink{classlist__storage}{list\+\_\+storage}. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{classlist__storage}{list\+\_\+storage} object to be copied.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlist__storage_aa5d77ecc2dd34386516e044272e50f55}\label{classlist__storage_aa5d77ecc2dd34386516e044272e50f55} 
+\index{list\_storage@{list\_storage}!clear@{clear}}
+\index{clear@{clear}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void list\+\_\+storage\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Vide la liste. 
+
+Clears the \doxylink{classlist__storage}{list\+\_\+storage} object.
+
+Implements \mbox{\hyperlink{classstorage__type_aa667aef23ebc2425f07c5b6f33146bd1}{storage\+\_\+type}}.
+
+\Hypertarget{classlist__storage_afdb5713d8fb073e3be711b6f26d9c153}\label{classlist__storage_afdb5713d8fb073e3be711b6f26d9c153} 
+\index{list\_storage@{list\_storage}!get\_element@{get\_element}}
+\index{get\_element@{get\_element}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{get\_element()}{get\_element()}}
+{\footnotesize\ttfamily double list\+\_\+storage\+::get\+\_\+element (\begin{DoxyParamCaption}\item[{const int}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtient l\textquotesingle{}élément à la position spécifiée dans la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position de l\textquotesingle{}élément à obtenir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément à la position spécifiée 
+\end{DoxyReturn}
+Gets the value of the element at the specified position. 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the position is out of range.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classstorage__type_a73c8a625f1b584ad5ab99488f1109603}{storage\+\_\+type}}.
+
+\Hypertarget{classlist__storage_ac3dfb321939e004c03126d7e2cc56eb5}\label{classlist__storage_ac3dfb321939e004c03126d7e2cc56eb5} 
+\index{list\_storage@{list\_storage}!operator=@{operator=}}
+\index{operator=@{operator=}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \& list\+\_\+storage\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlist__storage}{list\+\_\+storage}} \&}]{storage }\end{DoxyParamCaption})}
+
+
+
+Opérateur d\textquotesingle{}assignation de \doxylink{classlist__storage}{list\+\_\+storage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & Le \doxylink{classlist__storage}{list\+\_\+storage} à assigner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Une référence vers le \doxylink{classlist__storage}{list\+\_\+storage} assigné 
+\end{DoxyReturn}
+Assignment operator for \doxylink{classlist__storage}{list\+\_\+storage}. 
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{classlist__storage}{list\+\_\+storage} object to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned \doxylink{classlist__storage}{list\+\_\+storage} object.
+\end{DoxyReturn}
+\Hypertarget{classlist__storage_a6959470ace2513a09ca2255b0f1b12fd}\label{classlist__storage_a6959470ace2513a09ca2255b0f1b12fd} 
+\index{list\_storage@{list\_storage}!pop\_element@{pop\_element}}
+\index{pop\_element@{pop\_element}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{pop\_element()}{pop\_element()}}
+{\footnotesize\ttfamily double list\+\_\+storage\+::pop\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Supprime et retourne l\textquotesingle{}élément en tête de liste. 
+
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément supprimé 
+\end{DoxyReturn}
+Removes and returns the first element from the \doxylink{classlist__storage}{list\+\_\+storage}. \begin{DoxyReturn}{Returns}
+The value of the removed element. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if the \doxylink{classlist__storage}{list\+\_\+storage} is empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{classstorage__type_acf6fa8b36ec49ce0b13d5db4458248ff}{storage\+\_\+type}}.
+
+\Hypertarget{classlist__storage_ac512aa3b726bcf94fbb69a2b5e59dd36}\label{classlist__storage_ac512aa3b726bcf94fbb69a2b5e59dd36} 
+\index{list\_storage@{list\_storage}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void list\+\_\+storage\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ajoute un élément à la fin de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Valeur de l\textquotesingle{}élément à ajouter \\
+\hline
+\end{DoxyParams}
+Adds an element to the end of the \doxylink{classlist__storage}{list\+\_\+storage}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & The value of the element to be added.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classstorage__type_a7688a255771f3a4a54e059663b3413e4}{storage\+\_\+type}}.
+
+\Hypertarget{classlist__storage_a996edaf72fd288c0c9061d874b74f9cd}\label{classlist__storage_a996edaf72fd288c0c9061d874b74f9cd} 
+\index{list\_storage@{list\_storage}!size@{size}}
+\index{size@{size}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int list\+\_\+storage\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtient le nombre d\textquotesingle{}éléments dans la liste. 
+
+\begin{DoxyReturn}{Returns}
+Nombre d\textquotesingle{}éléments dans la liste 
+\end{DoxyReturn}
+Gets the number of elements in the \doxylink{classlist__storage}{list\+\_\+storage}. \begin{DoxyReturn}{Returns}
+The number of elements in the \doxylink{classlist__storage}{list\+\_\+storage}.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classstorage__type_ada27f5f0a31844352c43b28b060f1ec0}{storage\+\_\+type}}.
+
+\Hypertarget{classlist__storage_a5ff68dc3c0fa89dd3745f40b52d2d898}\label{classlist__storage_a5ff68dc3c0fa89dd3745f40b52d2d898} 
+\index{list\_storage@{list\_storage}!sort\_storage@{sort\_storage}}
+\index{sort\_storage@{sort\_storage}!list\_storage@{list\_storage}}
+\doxysubsubsection{\texorpdfstring{sort\_storage()}{sort\_storage()}}
+{\footnotesize\ttfamily void list\+\_\+storage\+::sort\+\_\+storage (\begin{DoxyParamCaption}\item[{const bool}]{ascending }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Trie les éléments du stockage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & Booléen indiquant si le tri est croissant ou non \\
+\hline
+\end{DoxyParams}
+Sorts the \doxylink{classlist__storage}{list\+\_\+storage} in ascending or descending order. 
+\begin{DoxyParams}{Parameters}
+{\em ascending} & Flag indicating whether to sort in ascending order or not.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classstorage__type_a7fd2b4f3635e3fda7a8932f5a9edbaed}{storage\+\_\+type}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{list__storage_8h}{list\+\_\+storage.\+h}}\item 
+list\+\_\+storage.\+cpp\end{DoxyCompactItemize}

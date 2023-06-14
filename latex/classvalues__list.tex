@@ -1,0 +1,202 @@
+\doxysection{values\+\_\+list Class Reference}
+\hypertarget{classvalues__list}{}\label{classvalues__list}\index{values\_list@{values\_list}}
+
+
+Classe représentant une liste de valeurs.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+list.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvalues__list_1_1iterator__values__list}{iterator\+\_\+values\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Classe itératrice pour parcourir les éléments de la liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classvalues__list_a7e2d703382a313b87e8027760b3408e4}\label{classvalues__list_a7e2d703382a313b87e8027760b3408e4} 
+{\bfseries values\+\_\+list} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \doxylink{classvalues__list}{values\+\_\+list}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvalues__list_a93799b0a2bbf2ae2174a8f9c5a4df28d}{values\+\_\+list}} (const \mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de la classe \doxylink{classvalues__list}{values\+\_\+list}. \end{DoxyCompactList}\item 
+\Hypertarget{classvalues__list_a2b4ab65cd349bd76c76920ea8b8fb561}\label{classvalues__list_a2b4ab65cd349bd76c76920ea8b8fb561} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}values\+\_\+list} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classvalues__list}{values\+\_\+list}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \& \mbox{\hyperlink{classvalues__list_a013faeec588f047a7af9210ad74e3ca3}{operator=}} (const \mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \&other)
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation de la classe \doxylink{classvalues__list}{values\+\_\+list}. \end{DoxyCompactList}\item 
+\Hypertarget{classvalues__list_ac20473b79560a409e6f0eaf6381eecab}\label{classvalues__list_ac20473b79560a409e6f0eaf6381eecab} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Vide la liste en supprimant tous les éléments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvalues__list_a4cc218615b094b93748be4d72fdf9b83}{push\+\_\+back}} (double v)
+\begin{DoxyCompactList}\small\item\em Ajoute une valeur à la fin de la liste. \end{DoxyCompactList}\item 
+\Hypertarget{classvalues__list_a1c12e951c1c8816ad229bc0d70341ba1}\label{classvalues__list_a1c12e951c1c8816ad229bc0d70341ba1} 
+void {\bfseries pop\+\_\+element} ()
+\begin{DoxyCompactList}\small\item\em Supprime le dernier élément de la liste. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classvalues__list_abc0f6e80e7262ea7e694c2c893474d3b}{size}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nombre d\textquotesingle{}éléments dans la liste. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classvalues__list_a4a82d0e67970eca0f6bee15ffc34c7f7}{get\+\_\+value}} (size\+\_\+t position) const
+\begin{DoxyCompactList}\small\item\em Retourne la valeur d\textquotesingle{}un élément à une position donnée dans la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvalues__list_a135ac5571bbcb0a7bc9cc16e2cc2d1f2}{sort\+\_\+list}} (bool ascending)
+\begin{DoxyCompactList}\small\item\em Trie la liste dans l\textquotesingle{}ordre croissant ou décroissant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structvalues__list_1_1iterator__values__list}{iterator\+\_\+values\+\_\+list}} \mbox{\hyperlink{classvalues__list_aa50082aa5fc143d69a5f0475ca8c1e3a}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Retourne un itérateur pointant vers le premier élément de la liste. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structvalues__list_1_1iterator__values__list}{iterator\+\_\+values\+\_\+list}} \mbox{\hyperlink{classvalues__list_a200ec37ab12d57c76b2038b9d5cb4040}{end}} ()
+\begin{DoxyCompactList}\small\item\em Retourne un itérateur pointant vers la fin de la liste. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \& \mbox{\hyperlink{classvalues__list_a1a0df9a0f9e5dff314f2bc20821f3e05}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}indexation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une liste de valeurs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classvalues__list_a93799b0a2bbf2ae2174a8f9c5a4df28d}\label{classvalues__list_a93799b0a2bbf2ae2174a8f9c5a4df28d} 
+\index{values\_list@{values\_list}!values\_list@{values\_list}}
+\index{values\_list@{values\_list}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{values\_list()}{values\_list()}}
+{\footnotesize\ttfamily values\+\_\+list\+::values\+\_\+list (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de la classe \doxylink{classvalues__list}{values\+\_\+list}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Autre instance de \doxylink{classvalues__list}{values\+\_\+list} à copier \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvalues__list_aa50082aa5fc143d69a5f0475ca8c1e3a}\label{classvalues__list_aa50082aa5fc143d69a5f0475ca8c1e3a} 
+\index{values\_list@{values\_list}!begin@{begin}}
+\index{begin@{begin}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvalues__list_1_1iterator__values__list}{values\+\_\+list\+::iterator\+\_\+values\+\_\+list}} values\+\_\+list\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne un itérateur pointant vers le premier élément de la liste. 
+
+\begin{DoxyReturn}{Returns}
+Itérateur pointant vers le premier élément de la liste 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a200ec37ab12d57c76b2038b9d5cb4040}\label{classvalues__list_a200ec37ab12d57c76b2038b9d5cb4040} 
+\index{values\_list@{values\_list}!end@{end}}
+\index{end@{end}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structvalues__list_1_1iterator__values__list}{values\+\_\+list\+::iterator\+\_\+values\+\_\+list}} values\+\_\+list\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne un itérateur pointant vers la fin de la liste. 
+
+\begin{DoxyReturn}{Returns}
+Itérateur pointant vers la fin de la liste 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a4a82d0e67970eca0f6bee15ffc34c7f7}\label{classvalues__list_a4a82d0e67970eca0f6bee15ffc34c7f7} 
+\index{values\_list@{values\_list}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily double values\+\_\+list\+::get\+\_\+value (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{position }\end{DoxyParamCaption}) const}
+
+
+
+Retourne la valeur d\textquotesingle{}un élément à une position donnée dans la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position de l\textquotesingle{}élément \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément à la position donnée 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a013faeec588f047a7af9210ad74e3ca3}\label{classvalues__list_a013faeec588f047a7af9210ad74e3ca3} 
+\index{values\_list@{values\_list}!operator=@{operator=}}
+\index{operator=@{operator=}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \& values\+\_\+list\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvalues__list}{values\+\_\+list}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Opérateur d\textquotesingle{}assignation de la classe \doxylink{classvalues__list}{values\+\_\+list}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Autre instance de \doxylink{classvalues__list}{values\+\_\+list} à copier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Référence à l\textquotesingle{}instance courante de \doxylink{classvalues__list}{values\+\_\+list} 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a1a0df9a0f9e5dff314f2bc20821f3e05}\label{classvalues__list_a1a0df9a0f9e5dff314f2bc20821f3e05} 
+\index{values\_list@{values\_list}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist__element}{list\+\_\+element}} \& values\+\_\+list\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}indexation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Indice de l\textquotesingle{}élément à accéder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Référence à l\textquotesingle{}élément à l\textquotesingle{}indice donné 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a4cc218615b094b93748be4d72fdf9b83}\label{classvalues__list_a4cc218615b094b93748be4d72fdf9b83} 
+\index{values\_list@{values\_list}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void values\+\_\+list\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})}
+
+
+
+Ajoute une valeur à la fin de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Valeur à ajouter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classvalues__list_abc0f6e80e7262ea7e694c2c893474d3b}\label{classvalues__list_abc0f6e80e7262ea7e694c2c893474d3b} 
+\index{values\_list@{values\_list}!size@{size}}
+\index{size@{size}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t values\+\_\+list\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nombre d\textquotesingle{}éléments dans la liste. 
+
+\begin{DoxyReturn}{Returns}
+Nombre d\textquotesingle{}éléments dans la liste 
+\end{DoxyReturn}
+\Hypertarget{classvalues__list_a135ac5571bbcb0a7bc9cc16e2cc2d1f2}\label{classvalues__list_a135ac5571bbcb0a7bc9cc16e2cc2d1f2} 
+\index{values\_list@{values\_list}!sort\_list@{sort\_list}}
+\index{sort\_list@{sort\_list}!values\_list@{values\_list}}
+\doxysubsubsection{\texorpdfstring{sort\_list()}{sort\_list()}}
+{\footnotesize\ttfamily void values\+\_\+list\+::sort\+\_\+list (\begin{DoxyParamCaption}\item[{bool}]{ascending }\end{DoxyParamCaption})}
+
+
+
+Trie la liste dans l\textquotesingle{}ordre croissant ou décroissant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & True pour trier dans l\textquotesingle{}ordre croissant, false pour trier dans l\textquotesingle{}ordre décroissant \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__list_8h}{data\+\_\+list.\+h}}\item 
+data\+\_\+list.\+cpp\end{DoxyCompactItemize}

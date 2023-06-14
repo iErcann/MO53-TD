@@ -1,0 +1,65 @@
+\doxysection{Writer Class Reference}
+\hypertarget{class_writer}{}\label{class_writer}\index{Writer@{Writer}}
+
+
+The writer class is an abstract class used to write data from an object that inherits from \doxylink{classstorage__type}{storage\+\_\+type}.  
+
+
+
+
+{\ttfamily \#include $<$writer.\+h$>$}
+
+Inheritance diagram for Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_writer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_writer_ac1805972274066158c1a739a34b3428a}\label{class_writer_ac1805972274066158c1a739a34b3428a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Writer} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_writer}{Writer}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_writer_afc6e89780bf817f9a739c349ae2eb3c6}{write}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function that writes data from a \doxylink{classstorage__type}{storage\+\_\+type} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The writer class is an abstract class used to write data from an object that inherits from \doxylink{classstorage__type}{storage\+\_\+type}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classstorage__type}{storage\+\_\+type} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_writer_afc6e89780bf817f9a739c349ae2eb3c6}\label{class_writer_afc6e89780bf817f9a739c349ae2eb3c6} 
+\index{Writer@{Writer}!write@{write}}
+\index{write@{write}!Writer@{Writer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void Writer\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function that writes data from a \doxylink{classstorage__type}{storage\+\_\+type} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & The object that stores the data to be written. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_write_exception}{Write\+Exception}} & when a writing error occurs. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classtext__writer_a1293a833a8d3704448667440aeb2a8e2}{text\+\_\+writer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+writer.\+h\end{DoxyCompactItemize}

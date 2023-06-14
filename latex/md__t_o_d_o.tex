@@ -1,0 +1,100 @@
+\chapter{TODO list}
+\hypertarget{md__t_o_d_o}{}\label{md__t_o_d_o}\index{TODO list@{TODO list}}
+\label{md__t_o_d_o_autotoc_md4}%
+\Hypertarget{md__t_o_d_o_autotoc_md4}%
+ Cette liste pourra vous guider dans le choix des étapes de refactoring en présentant les refactoring majeurs à faire sur le code.\hypertarget{md__t_o_d_o_autotoc_md5}{}\doxysection{\texorpdfstring{Rendre la liste chaînée compatible avec les appels du vector}{Rendre la liste chaînée compatible avec les appels du vector}}\label{md__t_o_d_o_autotoc_md5}
+Cette tâche doit permettre d\textquotesingle{}utiliser la liste comme le vecteur. Pour le permettre, il est nécessaire \+:
+
+
+\begin{DoxyItemize}
+\item de renommer {\ttfamily add\+\_\+value} en {\ttfamily push\+\_\+back}
+\item de renommer {\ttfamily clear\+\_\+list} en {\ttfamily clear}
+\item d\textquotesingle{}ajouter un iterateur à la classe, ainsi que les méthodes {\ttfamily begin} et {\ttfamily end} permettant de parcourir la liste, ainsi que l\textquotesingle{}opérateur {\ttfamily ++} pour ces itérateurs.
+\item d\textquotesingle{}ajouter l\textquotesingle{}opérateur {\ttfamily \mbox{[}\mbox{]}} pour accéder à une valeur par sa position.
+\end{DoxyItemize}\hypertarget{md__t_o_d_o_autotoc_md6}{}\doxysection{\texorpdfstring{Utilisation d\textquotesingle{}un manager pour les ressources}{Utilisation d'un manager pour les ressources}}\label{md__t_o_d_o_autotoc_md6}
+Le manager est responsable de créer des objets, et de gérer leur cycle de vie. Le manager peut notamment avoir plusieurs factory pour les différents rôles (sources de données, type de stockage, sortie, type de calcul à effectuer)\hypertarget{md__t_o_d_o_autotoc_md7}{}\doxysection{\texorpdfstring{Injection de dépendances}{Injection de dépendances}}\label{md__t_o_d_o_autotoc_md7}
+Jusqu\textquotesingle{}à cette tâche, les modifications ne changent pas réellement le fonctionnement du programme. À partir de cette étape, on va rendre le programme plus facile à modifier et à tester. L\textquotesingle{}idée est d\textquotesingle{}avoir un flux de type lire -\/\texorpdfstring{$>$}{>} stocker -\/\texorpdfstring{$>$}{>} traiter -\/\texorpdfstring{$>$}{>} écrire où chaque étape peut être paramétrée en injectant l\textquotesingle{}objet requis dans le flux. Un nouvel objet va donc être nécessaire, ainsi que des interfaces pour chaque rôle. Une bonne illustration pourrait être le code suivant \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classstorage__type}{storage\_type}}\ storage;\ \textcolor{comment}{//\ change\ storage\ type\ if\ required}}
+\DoxyCodeLine{\ \ \ \ storage\ =\ load\_bin(path\_to\_file);\ \textcolor{comment}{//\ change\ load\_bin\ to\ load\_text\ for\ text\ source}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classstorage__type}{storage\_type}}\ compute\_result\ =\ average(storage);\ \textcolor{comment}{//\ change\ function\ name\ to\ change\ behaviour}}
+\DoxyCodeLine{\ \ \ \ write\_text(compute\_result);\ \textcolor{comment}{//\ change\ to\ write\_bin\ to\ output\ in\ bin,\ to\ display\ for\ screen\ output}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Le code si dessus est inutilement complexe, difficile à maintenir, à flexibiliser et à tester. Un bon code serait semblable à \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classstorage__type}{storage\_type}}\ \{\ \textcolor{comment}{//\ pure\ virtual}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ Declarations\ */}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\textcolor{comment}{//\ list\_storage,\ vector\_storage\ inherit\ from\ storage\_type}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classloader}{loader}}\ \{\ \textcolor{comment}{//\ pure\ virtual}}
+\DoxyCodeLine{\};\ \textcolor{comment}{//\ as\ for\ storage\_type,\ text\ and\ bin\ loaders\ are\ children\ of\ loader}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classcalculation}{calculation}}\ \{\ \textcolor{comment}{//\ pure\ virtual}}
+\DoxyCodeLine{\};\ \textcolor{comment}{//\ average,\ rolling\_average,\ etc.\ inherit\ from\ calculation}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }writer\ \{\ \textcolor{comment}{//\ pure\ virtual}}
+\DoxyCodeLine{\};\ \textcolor{comment}{//\ any\ output\ (file\ -\/\ text\ or\ bin,\ screen)\ inherit\ from\ this\ one}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classprocess}{process}}\ \{\ \textcolor{comment}{//\ raw\ pointers\ may\ be\ improved}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classstorage__type}{storage\_type}}\ *\_storage;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classloader}{loader}}\ *\_loader;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classcalculation}{calculation}}\ *\_calc;}
+\DoxyCodeLine{\ \ \ \ writer\ *\_writer;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classprocess}{process}}(\mbox{\hyperlink{classstorage__type}{storage\_type}}\ *stor,\ \mbox{\hyperlink{classloader}{loader}}\ *load,\ \mbox{\hyperlink{classcalculation}{calculation}}\ *calc,\ writer\ *write);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ execute();}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Il sera nécessaire, notamment pour le {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}}, d\textquotesingle{}exposer les méthodes communes aux classes sous-\/jacentes (opérateur d\textquotesingle{}accès {\ttfamily \mbox{[}\mbox{]}}, begin, end, iterator, etc.) pour permettre l\textquotesingle{}accès à ces méthodes au travers de l\textquotesingle{}interface.
+
+Simplement, le manager crée (grâce aux factories), une instance de chaque élément nécessaire (il pourrait y en avoir plus ou moins), puis instancie un objet de type process auquel chaque instance des éléments requis. Puis, le main appelle la méthode {\ttfamily execute} qui réalise les appels aux différentes étapes \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ process::execute()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ /!\(\backslash\)\ Think\ of\ checking\ for\ nullptr\ first}}
+\DoxyCodeLine{\ \ \ \ *\_storage\ =\ \_loader-\/>\mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{load}}(path\_to\_file);}
+\DoxyCodeLine{\ \ \ \ \_calc-\/>compute(\_storage);}
+\DoxyCodeLine{\ \ \ \ \_writer-\/>\mbox{\hyperlink{class_writer_afc6e89780bf817f9a739c349ae2eb3c6}{write}}(\_storage);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Et dans le main \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ \ \ resource\_manager\ mgr\{\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Next\ line\ can\ be\ parameterized}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classprocess}{process}}\ p\{mgr.make\_storage(LIST),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ mgr.make\_reader(BIN),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ mgr.make\_calculation(AVG),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ mgr.make\_writer(TEXT)\};}
+\DoxyCodeLine{\ \ \ \ p.execute();}
+\DoxyCodeLine{\ \ \ \ mgr.clear\_resources();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Avec une implémentation correcte (attention aux pointeurs natifs, à RAII, etc.), le programme devrait pouvoir s\textquotesingle{}exécuter avec des paramètres différents sans problème et sans fuite mémoire (tester avec valgrind).\hypertarget{md__t_o_d_o_autotoc_md8}{}\doxysection{\texorpdfstring{Ajout de tests}{Ajout de tests}}\label{md__t_o_d_o_autotoc_md8}
+Les dépendances du programme étant injectées et donc construites en dehors du flux d\textquotesingle{}exécution de l\textquotesingle{}algorithme, tout peut maintenant être testé plus facilement. À l\textquotesingle{}aide de l\textquotesingle{}API cppunit, ajouter des tests unitaires sur vos classes. Pour tester les fonctions de calcul, il est maintenant facile de construire des objets de type {\ttfamily \doxylink{classstorage__type}{storage\+\_\+type}} pour les passer en paramètre des fonctions de calcul et vérifier le résultat.\hypertarget{md__t_o_d_o_autotoc_md9}{}\doxysection{\texorpdfstring{Ajout de commentaires}{Ajout de commentaires}}\label{md__t_o_d_o_autotoc_md9}
+Avec une syntaxe doxygen, écrire les commentaires des classes et des fonctions pour générer la documentation du code. 

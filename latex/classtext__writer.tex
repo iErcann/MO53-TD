@@ -1,0 +1,114 @@
+\doxysection{text\+\_\+writer Class Reference}
+\hypertarget{classtext__writer}{}\label{classtext__writer}\index{text\_writer@{text\_writer}}
+
+
+{\ttfamily \#include $<$text\+\_\+writer.\+h$>$}
+
+Inheritance diagram for text\+\_\+writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtext__writer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtext__writer_acfc4ee2ae325f87ef912f6bd04fcb459}{text\+\_\+writer}} ()
+\item 
+\mbox{\hyperlink{classtext__writer_a99d34dd96826f5cf39c8bbe0f6f0d2ec}{text\+\_\+writer}} (const string \&p\+\_\+destination)
+\item 
+\mbox{\hyperlink{classtext__writer_adf193c53a57f2529b39c95b16f535f63}{text\+\_\+writer}} (const \mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \&p\+\_\+text\+\_\+writer)
+\item 
+\mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \& \mbox{\hyperlink{classtext__writer_a04cc57ae591d24612152876f4e9955ef}{operator=}} (const \mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \&p\+\_\+text\+\_\+writer)
+\item 
+virtual \mbox{\hyperlink{classtext__writer_a9c6775010a78980fbfa67c94e0da2fed}{\texorpdfstring{$\sim$}{\string~}text\+\_\+writer}} ()
+\item 
+virtual void \mbox{\hyperlink{classtext__writer_a1293a833a8d3704448667440aeb2a8e2}{write}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_writer}{Writer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Writer} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_writer}{Writer}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_writer_afc6e89780bf817f9a739c349ae2eb3c6}{write}} (\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&storage)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function that writes data from a \doxylink{classstorage__type}{storage\+\_\+type} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Text\+\_\+writer implements the writer class to write data from a \doxylink{classstorage__type}{storage\+\_\+type} object to a text file. \begin{DoxySeeAlso}{See also}
+writer 
+
+writer\+\_\+type 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtext__writer_acfc4ee2ae325f87ef912f6bd04fcb459}\label{classtext__writer_acfc4ee2ae325f87ef912f6bd04fcb459} 
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{text\_writer()}{text\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily text\+\_\+writer\+::text\+\_\+writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+default constructor \Hypertarget{classtext__writer_a99d34dd96826f5cf39c8bbe0f6f0d2ec}\label{classtext__writer_a99d34dd96826f5cf39c8bbe0f6f0d2ec} 
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{text\_writer()}{text\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily text\+\_\+writer\+::text\+\_\+writer (\begin{DoxyParamCaption}\item[{const string \&}]{p\+\_\+destination }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor used to set the the path to the destination text file 
+\begin{DoxyParams}{Parameters}
+{\em s} & path for the source bin file used by the write function \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtext__writer_adf193c53a57f2529b39c95b16f535f63}\label{classtext__writer_adf193c53a57f2529b39c95b16f535f63} 
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\index{text\_writer@{text\_writer}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{text\_writer()}{text\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily text\+\_\+writer\+::text\+\_\+writer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \&}]{p\+\_\+text\+\_\+writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+copy constructor 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+text\+\_\+writer} & \doxylink{classtext__writer}{text\+\_\+writer} to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtext__writer_a9c6775010a78980fbfa67c94e0da2fed}\label{classtext__writer_a9c6775010a78980fbfa67c94e0da2fed} 
+\index{text\_writer@{text\_writer}!````~text\_writer@{\texorpdfstring{$\sim$}{\string~}text\_writer}}
+\index{````~text\_writer@{\texorpdfstring{$\sim$}{\string~}text\_writer}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}text\_writer()}{\string~text\_writer()}}
+{\footnotesize\ttfamily virtual text\+\_\+writer\+::\texorpdfstring{$\sim$}{\string~}text\+\_\+writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+destructor function 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtext__writer_a04cc57ae591d24612152876f4e9955ef}\label{classtext__writer_a04cc57ae591d24612152876f4e9955ef} 
+\index{text\_writer@{text\_writer}!operator=@{operator=}}
+\index{operator=@{operator=}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \& text\+\_\+writer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtext__writer}{text\+\_\+writer}} \&}]{p\+\_\+text\+\_\+writer }\end{DoxyParamCaption})}
+
+copy operator 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+text\+\_\+writer} & \doxylink{classtext__writer}{text\+\_\+writer} to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classtext__writer_a1293a833a8d3704448667440aeb2a8e2}\label{classtext__writer_a1293a833a8d3704448667440aeb2a8e2} 
+\index{text\_writer@{text\_writer}!write@{write}}
+\index{write@{write}!text\_writer@{text\_writer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void text\+\_\+writer\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstorage__type}{storage\+\_\+type}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function that writes data from a \doxylink{classstorage__type}{storage\+\_\+type} object into a bin file. Use to set the path to the destination bin file. 
+\begin{DoxyParams}{Parameters}
+{\em storage} & object that stores the data the write function uses \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_writer_afc6e89780bf817f9a739c349ae2eb3c6}{Writer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+text\+\_\+writer.\+h\item 
+text\+\_\+writer.\+cpp\end{DoxyCompactItemize}

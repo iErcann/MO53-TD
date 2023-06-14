@@ -1,0 +1,208 @@
+\doxysection{data\+\_\+list Class Reference}
+\hypertarget{classdata__list}{}\label{classdata__list}\index{data\_list@{data\_list}}
+
+
+Classe représentant une liste de données.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+list.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdata__list_a44ab54bd225e528a292b54a319b95ece}\label{classdata__list_a44ab54bd225e528a292b54a319b95ece} 
+{\bfseries data\+\_\+list} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \doxylink{classdata__list}{data\+\_\+list}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list_ade7d449481419dccb7c510dd4a72310c}{data\+\_\+list}} (const \mbox{\hyperlink{classdata__list}{data\+\_\+list}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de la classe \doxylink{classdata__list}{data\+\_\+list}. \end{DoxyCompactList}\item 
+\Hypertarget{classdata__list_a8509b928119916d2f2572ac351d358f9}\label{classdata__list_a8509b928119916d2f2572ac351d358f9} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}data\+\_\+list} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classdata__list}{data\+\_\+list}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__list_ae2d3a14d0dc7134ad1c61fada7608dae}{from\+\_\+text}} (const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Méthode pour remplir la liste à partir d\textquotesingle{}une source texte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__list_a80ddc40875c12ec3754c9a4411695274}{from\+\_\+binary}} (const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Méthode pour remplir la liste à partir d\textquotesingle{}une source binaire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__list_a165f8b1641d76aeb7b89522533b3e638}{to\+\_\+text}} (const std\+::string \&destination)
+\begin{DoxyCompactList}\small\item\em Méthode pour écrire les données de la liste vers une destination texte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__list_ab44bf6fcc5c571e875dfa60fe1e629a9}{to\+\_\+binary}} (const std\+::string \&destination)
+\begin{DoxyCompactList}\small\item\em Méthode pour écrire les données de la liste vers une destination binaire. \end{DoxyCompactList}\item 
+\Hypertarget{classdata__list_a3273a5a87b3553bc1f5792f47b43e2b1}\label{classdata__list_a3273a5a87b3553bc1f5792f47b43e2b1} 
+void {\bfseries print\+\_\+data} () const
+\begin{DoxyCompactList}\small\item\em Affiche les données de la liste. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \mbox{\hyperlink{classdata__list_a303fa5c0e23f269bf5610fe5aa3996ea}{moving\+\_\+average}} (size\+\_\+t window\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Calcule et retourne une nouvelle liste avec la moyenne mobile des données. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \mbox{\hyperlink{classdata__list_a3cb4ecaada50cbacd922d09f7e01a800}{sort\+\_\+table}} (bool ascending=true)
+\begin{DoxyCompactList}\small\item\em Trie la liste dans l\textquotesingle{}ordre croissant ou décroissant et retourne une nouvelle liste triée. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \mbox{\hyperlink{classdata__list_a4c15a56717a44853c9a996813a86c42b}{average}} ()
+\begin{DoxyCompactList}\small\item\em Calcule et retourne une nouvelle liste avec la moyenne des données. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \mbox{\hyperlink{classdata__list_ab9e79ec9ac91644b7034d1ba8f916fa9}{table\+\_\+sum}} ()
+\begin{DoxyCompactList}\small\item\em Calcule et retourne une nouvelle liste avec la somme des données. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__list}{data\+\_\+list}} \mbox{\hyperlink{classdata__list_ad89105e18df68277611528885d5b2076}{table\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Calcule et retourne une nouvelle liste avec le nombre d\textquotesingle{}éléments dans la liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une liste de données. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdata__list_ade7d449481419dccb7c510dd4a72310c}\label{classdata__list_ade7d449481419dccb7c510dd4a72310c} 
+\index{data\_list@{data\_list}!data\_list@{data\_list}}
+\index{data\_list@{data\_list}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{data\_list()}{data\_list()}}
+{\footnotesize\ttfamily data\+\_\+list\+::data\+\_\+list (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdata__list}{data\+\_\+list}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de la classe \doxylink{classdata__list}{data\+\_\+list}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Autre instance de \doxylink{classdata__list}{data\+\_\+list} à copier \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdata__list_a4c15a56717a44853c9a996813a86c42b}\label{classdata__list_a4c15a56717a44853c9a996813a86c42b} 
+\index{data\_list@{data\_list}!average@{average}}
+\index{average@{average}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} data\+\_\+list\+::average (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcule et retourne une nouvelle liste avec la moyenne des données. 
+
+\begin{DoxyReturn}{Returns}
+Nouvelle liste avec la moyenne des données (une seule valeur) 
+\end{DoxyReturn}
+\Hypertarget{classdata__list_a80ddc40875c12ec3754c9a4411695274}\label{classdata__list_a80ddc40875c12ec3754c9a4411695274} 
+\index{data\_list@{data\_list}!from\_binary@{from\_binary}}
+\index{from\_binary@{from\_binary}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{from\_binary()}{from\_binary()}}
+{\footnotesize\ttfamily void data\+\_\+list\+::from\+\_\+binary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+
+
+Méthode pour remplir la liste à partir d\textquotesingle{}une source binaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Chemin vers le fichier source binaire \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__list_ae2d3a14d0dc7134ad1c61fada7608dae}\label{classdata__list_ae2d3a14d0dc7134ad1c61fada7608dae} 
+\index{data\_list@{data\_list}!from\_text@{from\_text}}
+\index{from\_text@{from\_text}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{from\_text()}{from\_text()}}
+{\footnotesize\ttfamily void data\+\_\+list\+::from\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+
+
+Méthode pour remplir la liste à partir d\textquotesingle{}une source texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Chemin vers le fichier source texte \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__list_a303fa5c0e23f269bf5610fe5aa3996ea}\label{classdata__list_a303fa5c0e23f269bf5610fe5aa3996ea} 
+\index{data\_list@{data\_list}!moving\_average@{moving\_average}}
+\index{moving\_average@{moving\_average}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{moving\_average()}{moving\_average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} data\+\_\+list\+::moving\+\_\+average (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{window\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+Calcule et retourne une nouvelle liste avec la moyenne mobile des données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+width} & Largeur de la fenêtre de la moyenne mobile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouvelle liste avec la moyenne mobile des données 
+\end{DoxyReturn}
+\Hypertarget{classdata__list_a3cb4ecaada50cbacd922d09f7e01a800}\label{classdata__list_a3cb4ecaada50cbacd922d09f7e01a800} 
+\index{data\_list@{data\_list}!sort\_table@{sort\_table}}
+\index{sort\_table@{sort\_table}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{sort\_table()}{sort\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} data\+\_\+list\+::sort\+\_\+table (\begin{DoxyParamCaption}\item[{bool}]{ascending = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Trie la liste dans l\textquotesingle{}ordre croissant ou décroissant et retourne une nouvelle liste triée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & True pour trier dans l\textquotesingle{}ordre croissant, false pour trier dans l\textquotesingle{}ordre décroissant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouvelle liste triée 
+\end{DoxyReturn}
+\Hypertarget{classdata__list_ad89105e18df68277611528885d5b2076}\label{classdata__list_ad89105e18df68277611528885d5b2076} 
+\index{data\_list@{data\_list}!table\_count@{table\_count}}
+\index{table\_count@{table\_count}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{table\_count()}{table\_count()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} data\+\_\+list\+::table\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcule et retourne une nouvelle liste avec le nombre d\textquotesingle{}éléments dans la liste. 
+
+\begin{DoxyReturn}{Returns}
+Nouvelle liste avec le nombre d\textquotesingle{}éléments dans la liste (une seule valeur) 
+\end{DoxyReturn}
+\Hypertarget{classdata__list_ab9e79ec9ac91644b7034d1ba8f916fa9}\label{classdata__list_ab9e79ec9ac91644b7034d1ba8f916fa9} 
+\index{data\_list@{data\_list}!table\_sum@{table\_sum}}
+\index{table\_sum@{table\_sum}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{table\_sum()}{table\_sum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__list}{data\+\_\+list}} data\+\_\+list\+::table\+\_\+sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcule et retourne une nouvelle liste avec la somme des données. 
+
+\begin{DoxyReturn}{Returns}
+Nouvelle liste avec la somme des données (une seule valeur) 
+\end{DoxyReturn}
+\Hypertarget{classdata__list_ab44bf6fcc5c571e875dfa60fe1e629a9}\label{classdata__list_ab44bf6fcc5c571e875dfa60fe1e629a9} 
+\index{data\_list@{data\_list}!to\_binary@{to\_binary}}
+\index{to\_binary@{to\_binary}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{to\_binary()}{to\_binary()}}
+{\footnotesize\ttfamily void data\+\_\+list\+::to\+\_\+binary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{destination }\end{DoxyParamCaption})}
+
+
+
+Méthode pour écrire les données de la liste vers une destination binaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Chemin vers le fichier destination binaire \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__list_a165f8b1641d76aeb7b89522533b3e638}\label{classdata__list_a165f8b1641d76aeb7b89522533b3e638} 
+\index{data\_list@{data\_list}!to\_text@{to\_text}}
+\index{to\_text@{to\_text}!data\_list@{data\_list}}
+\doxysubsubsection{\texorpdfstring{to\_text()}{to\_text()}}
+{\footnotesize\ttfamily void data\+\_\+list\+::to\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{destination }\end{DoxyParamCaption})}
+
+
+
+Méthode pour écrire les données de la liste vers une destination texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Chemin vers le fichier destination texte \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__list_8h}{data\+\_\+list.\+h}}\item 
+data\+\_\+list.\+cpp\end{DoxyCompactItemize}

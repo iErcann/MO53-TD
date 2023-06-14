@@ -1,0 +1,268 @@
+\doxysection{data\+\_\+table Class Reference}
+\hypertarget{classdata__table}{}\label{classdata__table}\index{data\_table@{data\_table}}
+
+
+Represents a table of data.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+table.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdata__table_aac2e5eb1ae7ae42307fbc5e72980f004}\label{classdata__table_aac2e5eb1ae7ae42307fbc5e72980f004} 
+{\bfseries data\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classdata__table}{data\+\_\+table} class. \end{DoxyCompactList}\item 
+\Hypertarget{classdata__table_af3abcb45a83807fb9a80d605a77b6300}\label{classdata__table_af3abcb45a83807fb9a80d605a77b6300} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}data\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classdata__table}{data\+\_\+table} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__table_a91f2609ad2d4fb79b88bf519ff3525e4}{from\+\_\+text}} (const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Reads data from a text source and populates the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__table_a71aa3993295fd805d67f200afc371a42}{from\+\_\+binary}} (const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Reads data from a binary source and populates the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__table_aa86c6c9e43bdaabae2eeb2950384a9b4}{to\+\_\+text}} (const std\+::string \&destination)
+\begin{DoxyCompactList}\small\item\em Writes the table data to a text file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__table_a622b65ddb4db3bd7d99ca8e859811dbd}{to\+\_\+binary}} (const std\+::string \&destination)
+\begin{DoxyCompactList}\small\item\em Writes the table data to a binary file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata__table_af843ab7244595aa403150c0f0e70d1a9}{print\+\_\+data}} () const
+\begin{DoxyCompactList}\small\item\em Prints the data in the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__table}{data\+\_\+table}} \mbox{\hyperlink{classdata__table_a0e45c77b938188b636ea9b1c70e22074}{moving\+\_\+average}} (size\+\_\+t window\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Computes the moving average of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__table}{data\+\_\+table}} \mbox{\hyperlink{classdata__table_a0532bb68a617c03e9a173eb229f5030b}{sort\+\_\+table}} (bool ascending=true)
+\begin{DoxyCompactList}\small\item\em Sorts the table in ascending or descending order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__table}{data\+\_\+table}} \mbox{\hyperlink{classdata__table_a434f183e42e068378e5965281127525c}{average}} ()
+\begin{DoxyCompactList}\small\item\em Computes the average of the values in the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__table}{data\+\_\+table}} \mbox{\hyperlink{classdata__table_a13918efa3d071f9a0db1097a6e71349a}{table\+\_\+sum}} ()
+\begin{DoxyCompactList}\small\item\em Computes the sum of the values in the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdata__table}{data\+\_\+table}} \mbox{\hyperlink{classdata__table_ae21d42f854c08e1140608dce54284ad4}{table\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Computes the count of the values in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a table of data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdata__table_a434f183e42e068378e5965281127525c}\label{classdata__table_a434f183e42e068378e5965281127525c} 
+\index{data\_table@{data\_table}!average@{average}}
+\index{average@{average}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__table}{data\+\_\+table}} data\+\_\+table\+::average (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes the average of the values in the table. 
+
+Computes the average of the table.
+
+\begin{DoxyReturn}{Returns}
+A new instance of \doxylink{classdata__table}{data\+\_\+table} containing the average as a single value.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{classdata__table}{data\+\_\+table} object containing the average value. 
+\end{DoxyReturn}
+\Hypertarget{classdata__table_a71aa3993295fd805d67f200afc371a42}\label{classdata__table_a71aa3993295fd805d67f200afc371a42} 
+\index{data\_table@{data\_table}!from\_binary@{from\_binary}}
+\index{from\_binary@{from\_binary}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{from\_binary()}{from\_binary()}}
+{\footnotesize\ttfamily void data\+\_\+table\+::from\+\_\+binary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+
+
+Reads data from a binary source and populates the table. 
+
+Reads data from a binary file and populates the table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source file name.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The path of the binary file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__table_a91f2609ad2d4fb79b88bf519ff3525e4}\label{classdata__table_a91f2609ad2d4fb79b88bf519ff3525e4} 
+\index{data\_table@{data\_table}!from\_text@{from\_text}}
+\index{from\_text@{from\_text}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{from\_text()}{from\_text()}}
+{\footnotesize\ttfamily void data\+\_\+table\+::from\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source }\end{DoxyParamCaption})}
+
+
+
+Reads data from a text source and populates the table. 
+
+Reads data from a text file and populates the table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source file name.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The path of the text file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__table_a0e45c77b938188b636ea9b1c70e22074}\label{classdata__table_a0e45c77b938188b636ea9b1c70e22074} 
+\index{data\_table@{data\_table}!moving\_average@{moving\_average}}
+\index{moving\_average@{moving\_average}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{moving\_average()}{moving\_average()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__table}{data\+\_\+table}} data\+\_\+table\+::moving\+\_\+average (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{window\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+Computes the moving average of the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+width} & The width of the moving average window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \doxylink{classdata__table}{data\+\_\+table} containing the moving average.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+width} & The width of the moving average window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{classdata__table}{data\+\_\+table} object containing the moving average. 
+\end{DoxyReturn}
+\Hypertarget{classdata__table_af843ab7244595aa403150c0f0e70d1a9}\label{classdata__table_af843ab7244595aa403150c0f0e70d1a9} 
+\index{data\_table@{data\_table}!print\_data@{print\_data}}
+\index{print\_data@{print\_data}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{print\_data()}{print\_data()}}
+{\footnotesize\ttfamily void data\+\_\+table\+::print\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the data in the table. 
+
+Prints the data in the table to the console. \Hypertarget{classdata__table_a0532bb68a617c03e9a173eb229f5030b}\label{classdata__table_a0532bb68a617c03e9a173eb229f5030b} 
+\index{data\_table@{data\_table}!sort\_table@{sort\_table}}
+\index{sort\_table@{sort\_table}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{sort\_table()}{sort\_table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__table}{data\+\_\+table}} data\+\_\+table\+::sort\+\_\+table (\begin{DoxyParamCaption}\item[{bool}]{ascending = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sorts the table in ascending or descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & If true, sorts the table in ascending order. If false, sorts in descending order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \doxylink{classdata__table}{data\+\_\+table} containing the sorted table.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & If true, sorts the table in ascending order. If false, sorts in descending order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sorted \doxylink{classdata__table}{data\+\_\+table} object. 
+\end{DoxyReturn}
+\Hypertarget{classdata__table_ae21d42f854c08e1140608dce54284ad4}\label{classdata__table_ae21d42f854c08e1140608dce54284ad4} 
+\index{data\_table@{data\_table}!table\_count@{table\_count}}
+\index{table\_count@{table\_count}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{table\_count()}{table\_count()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__table}{data\+\_\+table}} data\+\_\+table\+::table\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes the count of the values in the table. 
+
+Computes the count of values in the table.
+
+\begin{DoxyReturn}{Returns}
+A new instance of \doxylink{classdata__table}{data\+\_\+table} containing the count as a single value.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{classdata__table}{data\+\_\+table} object containing the count. 
+\end{DoxyReturn}
+\Hypertarget{classdata__table_a13918efa3d071f9a0db1097a6e71349a}\label{classdata__table_a13918efa3d071f9a0db1097a6e71349a} 
+\index{data\_table@{data\_table}!table\_sum@{table\_sum}}
+\index{table\_sum@{table\_sum}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{table\_sum()}{table\_sum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata__table}{data\+\_\+table}} data\+\_\+table\+::table\+\_\+sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes the sum of the values in the table. 
+
+\begin{DoxyReturn}{Returns}
+A new instance of \doxylink{classdata__table}{data\+\_\+table} containing the sum as a single value.
+\end{DoxyReturn}
+
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{classdata__table}{data\+\_\+table} object containing the sum. 
+\end{DoxyReturn}
+\Hypertarget{classdata__table_a622b65ddb4db3bd7d99ca8e859811dbd}\label{classdata__table_a622b65ddb4db3bd7d99ca8e859811dbd} 
+\index{data\_table@{data\_table}!to\_binary@{to\_binary}}
+\index{to\_binary@{to\_binary}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{to\_binary()}{to\_binary()}}
+{\footnotesize\ttfamily void data\+\_\+table\+::to\+\_\+binary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{destination }\end{DoxyParamCaption})}
+
+
+
+Writes the table data to a binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The destination file name.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The path of the binary file to write to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdata__table_aa86c6c9e43bdaabae2eeb2950384a9b4}\label{classdata__table_aa86c6c9e43bdaabae2eeb2950384a9b4} 
+\index{data\_table@{data\_table}!to\_text@{to\_text}}
+\index{to\_text@{to\_text}!data\_table@{data\_table}}
+\doxysubsubsection{\texorpdfstring{to\_text()}{to\_text()}}
+{\footnotesize\ttfamily void data\+\_\+table\+::to\+\_\+text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{destination }\end{DoxyParamCaption})}
+
+
+
+Writes the table data to a text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The destination file name.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The path of the text file to write to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__table_8h}{data\+\_\+table.\+h}}\item 
+data\+\_\+table.\+cpp\end{DoxyCompactItemize}
