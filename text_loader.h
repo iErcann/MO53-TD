@@ -1,8 +1,3 @@
-/**
-
-@file text_loader.h
-@brief This file contains the definition of the text_loader class.
-*/
 #ifndef TEXT_LOADER_H
 #define TEXT_LOADER_H
 
@@ -11,42 +6,45 @@
 #include <string>
 
 /**
-
-@class text_loader
-
-@brief A class that represents a text loader.
-
-This class inherits from the loader base class and is responsible for loading text data
-
-into a storage_type object.
-/
+ * \class text_loader
+ * \brief Classe représentant un chargeur de fichiers texte.
+ *
+ * La classe text_loader hérite de la classe loader et permet de charger
+ * des données à partir d'un fichier texte dans un objet de type storage_type.
+ */
 class text_loader : public loader
 {
 public:
-/*
+    /**
+     * \brief Constructeur par défaut.
+     *
+     * Ce constructeur initialise le nom du fichier à "texte.txt".
+     */
+    text_loader() : loader("texte.txt") {}
 
-@brief Default constructor.
-Initializes the text_loader with the default filename "texte.txt".
-*/
-text_loader() : loader("texte.txt"){}
-/**
+    /**
+     * \brief Constructeur avec nom de fichier personnalisé.
+     *
+     * Ce constructeur permet de spécifier le nom du fichier à charger.
+     * \param s Le nom du fichier à charger.
+     */
+    text_loader(const std::string &s) : loader(s) {}
 
-@brief Constructor with filename parameter.
-Initializes the text_loader with the specified filename.
-@param s The filename to load.
-*/
-text_loader(const string &s) : loader(s){};
-/**
+    /**
+     * \brief Destructeur virtuel.
+     *
+     * Destructeur virtuel pour assurer la libération appropriée des ressources.
+     */
+    virtual ~text_loader() {}
 
-@brief Destructor.
-*/
-virtual ~text_loader() {}
-/**
-
-@brief Loads text data into a storage_type object.
-@param storage The storage_type object to load the data into.
-@return A reference to the loaded storage_type object.
-*/
-storage_type &load(storage_type &storage);
+    /**
+     * \brief Charge les données du fichier texte dans le stockage spécifié.
+     *
+     * Cette fonction charge les données du fichier texte dans un objet de type storage_type.
+     * \param storage L'objet de type storage_type dans lequel charger les données.
+     * \return Une référence vers l'objet de type storage_type après le chargement des données.
+     */
+    storage_type &load(storage_type &storage);
 };
+
 #endif // TEXT_LOADER_H
