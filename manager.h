@@ -13,20 +13,20 @@
 /**
 
 @class Manager
-@brief Represents a manager for data operations.
+@brief Class that manages data operations.
 */
 class Manager
 {
 private:
-data_list _dataList; /**< The data list object. */
+data_list _dataList; /**< Data list object. */
 public:
 /**
-* @brief Default constructor for the Manager class.
+* @brief Default constructor for Manager class.
 */
-Manager()
+Manager();
 /**
- * @brief Retrieves the data list.
- * @return A reference to the data list object.
+ * @brief Getter for the data list object.
+ * @return Reference to the data list object.
  */
 data_list &getDataList();
 
