@@ -1,0 +1,14 @@
+\chapter{Refactoring avec git}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Refactoring avec git@{Refactoring avec git}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+ L\textquotesingle{}objectif de ce TD est d\textquotesingle{}utiliser git en équipe pour restructurer un programme mal conçu. Le programme d\textquotesingle{}exemple permet de lire des données de type {\ttfamily double}, de les stocker, d\textquotesingle{}effectuer des calculs dessus et d\textquotesingle{}écrire le résultat.
+
+En l\textquotesingle{}état du du début du TD, le programme fonctionne (plus ou moins), permet de lire depuis un fichier binaire ou texte, de stocker dans une structure soit à base de {\ttfamily vector}, soit à base de liste chaînée, et d\textquotesingle{}écrire le résultat dans un fichier texte, binaire, ou sur la sortie standard.
+
+Le changement de type de stockage, de calcul, et des formats d\textquotesingle{}entrée et de sortie se fait en modifiant le code.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Constitution des équipes}{Constitution des équipes}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Pour réaliser ce travail, vous constituerez des équipes de 3 à 4 étudiants. Il est préférable que chaque équipe comporte au moins un membre familiarisé avec C++, de préférence au moins le standard C++11.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Refactoring}{Refactoring}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Le programme actuel n\textquotesingle{}est pas maintenable ni testable facilement. Votre équipe est donc chargée de réaliser cette restructuration en vue de l\textquotesingle{}évolution du programme. Vous devez dans un premier temps réfléchir à une structure qui rende facile l\textquotesingle{}évolution et le test du programme. Vous appliquerez notamment la loi de Demeter et les bonnes pratiques du C++ vues en cours. Déléguer la gestion des données à un manager est également souhaitable.
+
+Si vous peinez à trouver les évolutions du code nécessaires, vous pouvez vous inspirer de la liste disponible \doxysectlink{md__t_o_d_o}{ici}{0}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Livrable}{Livrable}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Vous déposerez votre travail sur un dépôt git. Il sera notamment nécessaire que l\textquotesingle{}historique des contributions soit visible pour me permettre d\textquotesingle{}évaluer votre capacité à utiliser git dans le cadre d\textquotesingle{}un travail en équipe. Il vous sera nécessaire pour cela de commiter vos contributions avec l\textquotesingle{}option {\ttfamily -\/-\/no-\/ff} 

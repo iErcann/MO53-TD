@@ -1,0 +1,30 @@
+\doxysection{text\+\_\+writer.\+h}
+\hypertarget{text__writer_8h_source}{}\label{text__writer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEXT\_WRITER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEXT\_WRITER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}storage\_type.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}writer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtext__writer}{text\_writer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_writer}{Writer}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ destination;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classtext__writer_acfc4ee2ae325f87ef912f6bd04fcb459}{text\_writer}}()\ :\ destination(\textcolor{stringliteral}{"{}testoutput.txt"{}})\{\};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classtext__writer_a99d34dd96826f5cf39c8bbe0f6f0d2ec}{text\_writer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&p\_destination)\ :\ destination(p\_destination)\{\};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classtext__writer_adf193c53a57f2529b39c95b16f535f63}{text\_writer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtext__writer}{text\_writer}}\ \&p\_text\_writer)\ :\ destination(p\_text\_writer.destination)\{\};}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classtext__writer}{text\_writer}}\ \&\mbox{\hyperlink{classtext__writer_a04cc57ae591d24612152876f4e9955ef}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classtext__writer}{text\_writer}}\ \&p\_text\_writer);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classtext__writer_a9c6775010a78980fbfa67c94e0da2fed}{\string~text\_writer}}()\{\};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtext__writer_a1293a833a8d3704448667440aeb2a8e2}{write}}(\mbox{\hyperlink{classstorage__type}{storage\_type}}\ \&storage);}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEXT\_WRITER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,271 @@
+\doxysection{list\+\_\+element Class Reference}
+\hypertarget{classlist__element}{}\label{classlist__element}\index{list\_element@{list\_element}}
+
+
+Classe représentant un élément de liste.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+list.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlist__element_ad09f4131f56e61d19841c15da092e771}{list\+\_\+element}} (double v=0.\+0, \mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}p=nullptr, \mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}n=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlist__element}{list\+\_\+element}. \end{DoxyCompactList}\item 
+\Hypertarget{classlist__element_a3cf691d87a11e0e82a92bc7018fffe10}\label{classlist__element_a3cf691d87a11e0e82a92bc7018fffe10} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}list\+\_\+element} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlist__element}{list\+\_\+element}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlist__element_a178f4cca98cf8597dc48b64545d4b186}{get\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur pour l\textquotesingle{}élément suivant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_a18a41b4b47b8e093e82e016271541dc3}{set\+\_\+next}} (\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}n)
+\begin{DoxyCompactList}\small\item\em Mutateur pour l\textquotesingle{}élément suivant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlist__element_ae282880d49beae7049b60207d6caf660}{get\+\_\+prev}} ()
+\begin{DoxyCompactList}\small\item\em Accesseur pour l\textquotesingle{}élément précédent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_a070a6dc6dc9d8ea7847f39f37278aa0a}{set\+\_\+prev}} (\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}n)
+\begin{DoxyCompactList}\small\item\em Mutateur pour l\textquotesingle{}élément précédent. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlist__element_ace3c6890cdbbae0054ccf896a4104e34}{get\+\_\+value}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur pour la valeur de l\textquotesingle{}élément. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_af5da8a5c17781d07ff9411c4878d7b76}{set\+\_\+value}} (double v)
+\begin{DoxyCompactList}\small\item\em Mutateur pour la valeur de l\textquotesingle{}élément. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlist__element_abc0880a90b85ab23a02f8ffcdd6009b0}{list\+\_\+element}} (double v=0.\+0, shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ p=nullptr, shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ n=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{classlist__element}{list\+\_\+element}. \end{DoxyCompactList}\item 
+\Hypertarget{classlist__element_a3cf691d87a11e0e82a92bc7018fffe10}\label{classlist__element_a3cf691d87a11e0e82a92bc7018fffe10} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}list\+\_\+element} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{classlist__element}{list\+\_\+element}. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ \mbox{\hyperlink{classlist__element_a68c6b7df81d5b9ef969e40954ea03799}{get\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em Obtient le pointeur vers l\textquotesingle{}élément suivant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_a702c13b71132d40028457719578d4791}{set\+\_\+next}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ n)
+\begin{DoxyCompactList}\small\item\em Définit le pointeur vers l\textquotesingle{}élément suivant. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ \mbox{\hyperlink{classlist__element_a1335039e67c21b421f901375cf12a116}{get\+\_\+prev}} ()
+\begin{DoxyCompactList}\small\item\em Obtient le pointeur vers l\textquotesingle{}élément précédent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_aa4dd6ec05cabf0af66ead67eaadf777e}{set\+\_\+prev}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ n)
+\begin{DoxyCompactList}\small\item\em Définit le pointeur vers l\textquotesingle{}élément précédent. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlist__element_ace3c6890cdbbae0054ccf896a4104e34}{get\+\_\+value}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la valeur de l\textquotesingle{}élément. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlist__element_af5da8a5c17781d07ff9411c4878d7b76}{set\+\_\+value}} (double v)
+\begin{DoxyCompactList}\small\item\em Définit la valeur de l\textquotesingle{}élément. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un élément de liste. 
+
+Classe représentant un élément d\textquotesingle{}une liste. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlist__element_ad09f4131f56e61d19841c15da092e771}\label{classlist__element_ad09f4131f56e61d19841c15da092e771} 
+\index{list\_element@{list\_element}!list\_element@{list\_element}}
+\index{list\_element@{list\_element}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{list\_element()}{list\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily list\+\_\+element\+::list\+\_\+element (\begin{DoxyParamCaption}\item[{double}]{v = {\ttfamily 0.0},  }\item[{\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}}]{p = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}}]{n = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe \doxylink{classlist__element}{list\+\_\+element}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Valeur de l\textquotesingle{}élément \\
+\hline
+{\em p} & Pointeur vers l\textquotesingle{}élément précédent \\
+\hline
+{\em n} & Pointeur vers l\textquotesingle{}élément suivant \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_abc0880a90b85ab23a02f8ffcdd6009b0}\label{classlist__element_abc0880a90b85ab23a02f8ffcdd6009b0} 
+\index{list\_element@{list\_element}!list\_element@{list\_element}}
+\index{list\_element@{list\_element}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{list\_element()}{list\_element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily list\+\_\+element\+::list\+\_\+element (\begin{DoxyParamCaption}\item[{double}]{v = {\ttfamily 0.0},  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$}]{p = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$}]{n = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de \doxylink{classlist__element}{list\+\_\+element}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Valeur de l\textquotesingle{}élément \\
+\hline
+{\em p} & Pointeur vers l\textquotesingle{}élément précédent \\
+\hline
+{\em n} & Pointeur vers l\textquotesingle{}élément suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlist__element_a178f4cca98cf8597dc48b64545d4b186}\label{classlist__element_a178f4cca98cf8597dc48b64545d4b186} 
+\index{list\_element@{list\_element}!get\_next@{get\_next}}
+\index{get\_next@{get\_next}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_next()}{get\_next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*} list\+\_\+element\+::get\+\_\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesseur pour l\textquotesingle{}élément suivant. 
+
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}élément suivant 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_a68c6b7df81d5b9ef969e40954ea03799}\label{classlist__element_a68c6b7df81d5b9ef969e40954ea03799} 
+\index{list\_element@{list\_element}!get\_next@{get\_next}}
+\index{get\_next@{get\_next}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_next()}{get\_next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ list\+\_\+element\+::get\+\_\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le pointeur vers l\textquotesingle{}élément suivant. 
+
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}élément suivant 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_ae282880d49beae7049b60207d6caf660}\label{classlist__element_ae282880d49beae7049b60207d6caf660} 
+\index{list\_element@{list\_element}!get\_prev@{get\_prev}}
+\index{get\_prev@{get\_prev}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_prev()}{get\_prev()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*} list\+\_\+element\+::get\+\_\+prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesseur pour l\textquotesingle{}élément précédent. 
+
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}élément précédent 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_a1335039e67c21b421f901375cf12a116}\label{classlist__element_a1335039e67c21b421f901375cf12a116} 
+\index{list\_element@{list\_element}!get\_prev@{get\_prev}}
+\index{get\_prev@{get\_prev}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_prev()}{get\_prev()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$ list\+\_\+element\+::get\+\_\+prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le pointeur vers l\textquotesingle{}élément précédent. 
+
+\begin{DoxyReturn}{Returns}
+Pointeur vers l\textquotesingle{}élément précédent 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_ace3c6890cdbbae0054ccf896a4104e34}\label{classlist__element_ace3c6890cdbbae0054ccf896a4104e34} 
+\index{list\_element@{list\_element}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double list\+\_\+element\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accesseur pour la valeur de l\textquotesingle{}élément. 
+
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_ace3c6890cdbbae0054ccf896a4104e34}\label{classlist__element_ace3c6890cdbbae0054ccf896a4104e34} 
+\index{list\_element@{list\_element}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double list\+\_\+element\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la valeur de l\textquotesingle{}élément. 
+
+\begin{DoxyReturn}{Returns}
+Valeur de l\textquotesingle{}élément 
+\end{DoxyReturn}
+\Hypertarget{classlist__element_a18a41b4b47b8e093e82e016271541dc3}\label{classlist__element_a18a41b4b47b8e093e82e016271541dc3} 
+\index{list\_element@{list\_element}!set\_next@{set\_next}}
+\index{set\_next@{set\_next}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_next()}{set\_next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutateur pour l\textquotesingle{}élément suivant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Pointeur vers l\textquotesingle{}élément suivant \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_a702c13b71132d40028457719578d4791}\label{classlist__element_a702c13b71132d40028457719578d4791} 
+\index{list\_element@{list\_element}!set\_next@{set\_next}}
+\index{set\_next@{set\_next}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_next()}{set\_next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+next (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le pointeur vers l\textquotesingle{}élément suivant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Pointeur vers l\textquotesingle{}élément suivant \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_a070a6dc6dc9d8ea7847f39f37278aa0a}\label{classlist__element_a070a6dc6dc9d8ea7847f39f37278aa0a} 
+\index{list\_element@{list\_element}!set\_prev@{set\_prev}}
+\index{set\_prev@{set\_prev}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_prev()}{set\_prev()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+prev (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlist__element}{list\+\_\+element}} \texorpdfstring{$\ast$}{*}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutateur pour l\textquotesingle{}élément précédent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Pointeur vers l\textquotesingle{}élément précédent \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_aa4dd6ec05cabf0af66ead67eaadf777e}\label{classlist__element_aa4dd6ec05cabf0af66ead67eaadf777e} 
+\index{list\_element@{list\_element}!set\_prev@{set\_prev}}
+\index{set\_prev@{set\_prev}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_prev()}{set\_prev()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+prev (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classlist__element}{list\+\_\+element}} $>$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le pointeur vers l\textquotesingle{}élément précédent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Pointeur vers l\textquotesingle{}élément précédent \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_af5da8a5c17781d07ff9411c4878d7b76}\label{classlist__element_af5da8a5c17781d07ff9411c4878d7b76} 
+\index{list\_element@{list\_element}!set\_value@{set\_value}}
+\index{set\_value@{set\_value}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_value()}{set\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutateur pour la valeur de l\textquotesingle{}élément. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Nouvelle valeur de l\textquotesingle{}élément \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlist__element_af5da8a5c17781d07ff9411c4878d7b76}\label{classlist__element_af5da8a5c17781d07ff9411c4878d7b76} 
+\index{list\_element@{list\_element}!set\_value@{set\_value}}
+\index{set\_value@{set\_value}!list\_element@{list\_element}}
+\doxysubsubsection{\texorpdfstring{set\_value()}{set\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void list\+\_\+element\+::set\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la valeur de l\textquotesingle{}élément. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Valeur de l\textquotesingle{}élément \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__list_8h}{data\+\_\+list.\+h}}\item 
+\mbox{\hyperlink{list__storage_8h}{list\+\_\+storage.\+h}}\end{DoxyCompactItemize}

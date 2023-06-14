@@ -1,0 +1,26 @@
+\doxysection{loader.\+h}
+\hypertarget{loader_8h_source}{}\label{loader_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOADER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOADER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}storage\_type.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classloader}{loader}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}};\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classloader_af45d915d44f769fad43151df6236d4fc}{loader}}()\ :\ \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}}(\textcolor{stringliteral}{"{}texte.txt"{}})\ \{\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classloader_aecf0e8c4fb0a4a608b94586e2b29005a}{loader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&s)\ :\ \mbox{\hyperlink{classloader_aa2515cd162366f8f8b452559ba8b8e77}{source}}(s)\ \{\};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classloader_a3c97c3c48fcc1af3b9ec9aac4652a291}{\string~loader}}()\ \{\};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classstorage__type}{storage\_type}}\ \&\mbox{\hyperlink{classloader_a7459dd8c55fde00e2fcb3cf316562e2a}{load}}(\mbox{\hyperlink{classstorage__type}{storage\_type}}\ \&storage)\ =\ 0;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LOADER\_H}}
+
+\end{DoxyCode}
